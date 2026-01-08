@@ -24,6 +24,11 @@
             color: #0066cc;
             text-decoration: underline;
             font-weight: bold;
+            cursor: pointer; /* make it look clickable */
+        }
+        .aligned-text {
+            margin-left: 40px; /* aligns with bullets */
+            margin-bottom: 0.5em;
         }
         hr {
             margin: 30px 0;
@@ -74,18 +79,25 @@
 <hr>
 
 <h2>5. 💬 Support</h2>
-<p>
+
+<div class="aligned-text">
     Access FAQs:<br>
     <a href="https://sites.google.com/view/soilbit-admn/home" class="clickable-link" target="_blank">
         SoilBit Admin FAQs
     </a>
-</p>
-<p>
+</div>
+
+<div class="aligned-text">
     Contact support:<br>
-    <a href="mailto:smartsoilddg2025@gmail.com" class="clickable-link" target="_blank">
-        smartsoilddg2025@gmail.com
-    </a>
-</p>
+    <span class="clickable-link" id="copyAdminEmail">smartsoilddg2025@gmail.com</span>
+</div>
+
+<script>
+    // Copy admin email to clipboard
+    document.getElementById('copyAdminEmail').addEventListener('click', function() {
+        navigator.clipboard.writeText('smartsoilddg2025@gmail.com');
+    });
+</script>
 
 </body>
 </html>
